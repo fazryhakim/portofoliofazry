@@ -11,7 +11,20 @@ const D={
  exp:[
   {when:"Desember 2024 – Desember 2025",title:"System Development Intern",org:"PT Denso Manufacturing Indonesia",desc:"Merancang dan mengembangkan sistem web untuk memenuhi kebutuhan pengguna di departemen QA, menggunakan bahasa pemrograman PHP, framework CodeIgniter 3, dan Microsoft SQL Server, serta melakukan analisis data."}],
  edu:[{when:"2022 – 2026 | 3.54/4.00",title:"S1 Teknik Informatika",org:"Universitas Bani Saleh"}],
- certs:["Dicoding Academy Membangun Aplikasi Gen AI dengan Microsoft Azure","Dicoding Academy Belajar Penerapan Data Science dengan Microsoft Fabric","Dicoding Academy Belajar Dasar SQL","Dicoding Academy Belajar Dasar Manajemen Proyek","Dicoding Academy Belajar Dasar Data Science","Dicoding Academy Belajar Dasar AI", "Oracle Academy Java Programming","Oracle Academy Java Fundamental","Oracle Academy Database Design","Cisco Networking Academy CCNA 1", "Cisco Networking Academy IT Essentials","DBS Foundation Financial Literacy and Job Readiness","Ioda Academy Public Speaking"],
+ certs:[
+  {name:"Cisco-CCNA1",issuer:"Cisco Networking Academy",year:"2024",file:"sertifikat/Cisco-CCNA1.pdf"},
+  {name:"Cisco-ITE",issuer:"Cisco Networking Academy",year:"2023",file:"sertifikat/Cisco-ITE.pdf"},
+  {name:"DBS Foundation-Financial Literasi and Job Readiness",issuer:"DBS Foundation",year:"2026",file:"sertifikat/DBS Foundation-Financial Literasi and Job Readiness.pdf"},
+  {name:"Dicoding-Belajar Penerapan Data Science dengan Microsoft Fabric",issuer:"Dicoding Academy",year:"2026",file:"sertifikat/Dicoding-Belajar Penerapan Data Science dengan Microsoft Fabric.pdf"},
+  {name:"Dicoding-Membangun Aplikasi Gen AI dengan Microsoft Azure",issuer:"Dicoding Academy",year:"2026",file:"sertifikat/Dicoding-Membangun Aplikasi Gen AI dengan Microsoft Azure.pdf"},
+  {name:"Dicoding-PELATIHAN BELAJAR DASAR AI",issuer:"Dicoding Academy",year:"2024",file:"sertifikat/Dicoding-PELATIHAN BELAJAR DASAR AI.pdf"},
+  {name:"Dicoding-PELATIHAN BELAJAR DASAR DATA SCIENCE",issuer:"Dicoding Academy",year:"2024",file:"sertifikat/Dicoding-PELATIHAN BELAJAR DASAR DATA SCIENCE.pdf"},
+  {name:"Dicoding-PELATIHAN BELAJAR DASAR MANAJEMEN PROYEK",issuer:"Dicoding Academy",year:"2024",file:"sertifikat/Dicoding-PELATIHAN BELAJAR DASAR MANAJEMEN PROYEK.pdf"},
+  {name:"Dicoding-PELATIHAN BELAJAR DASAR SQL",issuer:"Dicoding Academy",year:"2024",file:"sertifikat/Dicoding-PELATIHAN BELAJAR DASAR SQL.pdf"},
+  {name:"Ioda-Public Speaking",issuer:"Ioda Academy",year:"2026",file:"sertifikat/Ioda-Public Speaking.pdf"},
+  {name:"Oracle-DATABASE DESIGN",issuer:"Oracle Academy",year:"2026",file:"sertifikat/Oracle-DATABASE DESIGN.pdf"},
+  {name:"Oracle-JAVA FUNDAMENTAL",issuer:"Oracle Academy",year:"2024",file:"sertifikat/Oracle-JAVA FUNDAMENTAL.pdf"},
+  {name:"Oracle-JAVA PROGRAMMING",issuer:"Oracle Academy",year:"2026",file:"sertifikat/Oracle-JAVA PROGRAMMING.pdf"}],
   org:[
   {when:"September 2024 – September 2026",role:"Sekretaris",org:"Karang Taruna",desc:"Sekretaris Karang Taruna adalah individu yang bertanggung jawab mengelola administrasi dan dokumentasi organisasi. Tugasnya meliputi mencatat notulen rapat, menyusun agenda kegiatan, serta mengelola surat-menyurat. Selain itu, sekretaris berperan dalam berkomunikasi dengan anggota maupun pihak eksternal, memastikan kelancaran arus informasi, serta mendukung program-program yang dilaksanakan oleh Karang Taruna."},
   {when:"Februari 2025 – Februari 2026",role:"Ketua Divisi Literasi dan Pengembangan",org:"Himpunan Mahasiswa Teknik Informatika (HMTI)",desc:"Kepala Divisi Literasi dan Pengembangan Himpunan Mahasiswa Teknik Informatika (HMTI) bertanggung jawab untuk merancang dan melaksanakan program literasi, mengembangkan kapasitas anggota melalui pelatihan, diskusi, atau lokakarya, mengelola kegiatan pengembangan diri dan peningkatan kualitas sumber daya manusia, serta mengevaluasi dan melaporkan hasil kegiatan divisi."},
@@ -61,7 +74,7 @@ setPhoto();
 const cvList=a=>a.map(x=>`<li>${x}</li>`).join("");
 function cvBody(){return `<div class="side"><div><h3>Kontak</h3><ul class="plain"><li>${D.email}</li><li>+${D.wa}</li><li>${D.links.linkedin.replace("https://www.","")}</li><li>${D.links.github.replace("https://","")}</li></ul></div>
 <div><h3>Keahlian</h3><div class="chips">${D.skills.map(s=>`<span class="chip">${s}</span>`).join("")}</div></div>
-<div><h3>Bahasa</h3><ul class="plain">${cvList(D.langs)}</ul></div><div><h3>Sertifikasi</h3><ul class="plain">${cvList(D.certs)}</ul></div></div>
+<div><h3>Bahasa</h3><ul class="plain">${cvList(D.langs)}</ul></div><div><h3>Sertifikasi</h3><ul class="plain">${D.certs.map(c=>`<li><a class="cert" href="${c.file}" target="_blank" rel="noopener"><span><b>${c.name}</b><small>${c.issuer} · ${c.year}</small></span><svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>`).join("")}</ul></div></div>
 <div class="main"><h2>${D.name}</h2><p class="role" style="margin:8px 0 14px;font-size:18px">${D.role}</p><p style="color:var(--mute);margin:0 0 30px">${D.about}</p>
 <h3>Pengalaman</h3><ul class="tl" style="margin-bottom:12px">${D.exp.map(e=>`<li><span class="when">${e.when}</span><h3 style="color:var(--ink);font-size:18px;font-weight:700">${e.title}</h3><div class="org">${e.org}</div><p>${e.desc}</p></li>`).join("")}</ul>
 <h3>Pendidikan</h3><ul class="tl">${D.edu.map(e=>`<li><span class="when">${e.when}</span><h3 style="color:var(--ink);font-size:18px;font-weight:700">${e.title}</h3><div class="org">${e.org}</div></li>`).join("")}</ul><h3 style="margin-top:12px">Organisasi</h3><ul class="tl">${D.org.map(o=>`<li><span class="when">${o.when}</span><h3 style="color:var(--ink);font-size:18px;font-weight:700">${o.role}</h3><div class="org">${o.org}</div><p>${o.desc}</p></li>`).join("")}</ul></div>`}
@@ -81,12 +94,12 @@ async function save(filename,data){
  }catch(e){if(e&&e.code==="declined")return;toast("Gagal menyimpan berkas. Coba lagi.")}}
 const slug=D.name.replace(/\s+/g,"_");
 
-$("#dlHtml").onclick=()=>{const css=`body{font:15px/1.6 Segoe UI,Arial,sans-serif;color:#16202E;max-width:820px;margin:32px auto;padding:0 24px}h1{margin:0}h2{font-size:15px;border-bottom:2px solid #2457D6;padding-bottom:4px;margin:26px 0 12px;color:#2457D6}.r{color:#2457D6;font-weight:600}.m{color:#5B6677;font-size:14px}.it{margin-bottom:14px}.it b{display:block}`;
- const html=`<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><title>CV ${D.name}</title><style>${css}</style></head><body><h1>${D.name}</h1><div class="r">${D.role}</div><div class="m">${D.email} · +${D.wa} · ${D.links.linkedin.replace("https://www.","")} · ${D.links.github.replace("https://","")}</div><h2>Profil</h2><p>${D.about}</p><h2>Pengalaman</h2>${D.exp.map(e=>`<div class="it"><b>${e.title} — ${e.org}</b><span class="m">${e.when}</span><div>${e.desc}</div></div>`).join("")}<h2>Pendidikan</h2>${D.edu.map(e=>`<div class="it"><b>${e.title} — ${e.org}</b><span class="m">${e.when}</span></div>`).join("")}<h2>Organisasi</h2>${D.org.map(o=>`<div class="it"><b>${o.role} — ${o.org}</b><span class="m">${o.when}</span><div>${o.desc}</div></div>`).join("")}<h2>Keahlian</h2><p>${D.skills.join(", ")}</p><h2>Sertifikasi</h2><p>${D.certs.join("; ")}</p><h2>Bahasa</h2><p>${D.langs.join("; ")}</p></body></html>`;
- save(`CV_${slug}.html`,html)};
+// $("#dlHtml").onclick=()=>{const css=`body{font:15px/1.6 Segoe UI,Arial,sans-serif;color:#16202E;max-width:820px;margin:32px auto;padding:0 24px}h1{margin:0}h2{font-size:15px;border-bottom:2px solid #2457D6;padding-bottom:4px;margin:26px 0 12px;color:#2457D6}.r{color:#2457D6;font-weight:600}.m{color:#5B6677;font-size:14px}.it{margin-bottom:14px}.it b{display:block}`;
+//  const html=`<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><title>CV ${D.name}</title><style>${css}</style></head><body><h1>${D.name}</h1><div class="r">${D.role}</div><div class="m">${D.email} · +${D.wa} · ${D.links.linkedin.replace("https://www.","")} · ${D.links.github.replace("https://","")}</div><h2>Profil</h2><p>${D.about}</p><h2>Pengalaman</h2>${D.exp.map(e=>`<div class="it"><b>${e.title} — ${e.org}</b><span class="m">${e.when}</span><div>${e.desc}</div></div>`).join("")}<h2>Pendidikan</h2>${D.edu.map(e=>`<div class="it"><b>${e.title} — ${e.org}</b><span class="m">${e.when}</span></div>`).join("")}<h2>Organisasi</h2>${D.org.map(o=>`<div class="it"><b>${o.role} — ${o.org}</b><span class="m">${o.when}</span><div>${o.desc}</div></div>`).join("")}<h2>Keahlian</h2><p>${D.skills.join(", ")}</p><h2>Sertifikasi</h2><p>${D.certs.map(c=>`${c.name} (${c.issuer}, ${c.year})`).join("; ")}</p><h2>Bahasa</h2><p>${D.langs.join("; ")}</p></body></html>`;
+//  save(`CV_${slug}.html`,html)};
 
-$("#dlMd").onclick=()=>{const md=`# ${D.name}\n**${D.role}**\n\n${D.email} · +${D.wa}\n\n## Profil\n${D.about}\n\n## Pengalaman\n${D.exp.map(e=>`### ${e.title} — ${e.org}\n_${e.when}_\n\n${e.desc}\n`).join("\n")}\n## Pendidikan\n${D.edu.map(e=>`- ${e.title}, ${e.org} (${e.when})`).join("\n")}\n\n## Organisasi\n${D.org.map(o=>`- ${o.role}, ${o.org} (${o.when})`).join("\n")}\n\n## Keahlian\n${D.skills.join(", ")}\n\n## Sertifikasi\n${D.certs.map(c=>"- "+c).join("\n")}\n`;
- save(`CV_${slug}.md`,md)};
+// $("#dlMd").onclick=()=>{const md=`# ${D.name}\n**${D.role}**\n\n${D.email} · +${D.wa}\n\n## Profil\n${D.about}\n\n## Pengalaman\n${D.exp.map(e=>`### ${e.title} — ${e.org}\n_${e.when}_\n\n${e.desc}\n`).join("\n")}\n## Pendidikan\n${D.edu.map(e=>`- ${e.title}, ${e.org} (${e.when})`).join("\n")}\n\n## Organisasi\n${D.org.map(o=>`- ${o.role}, ${o.org} (${o.when})`).join("\n")}\n\n## Keahlian\n${D.skills.join(", ")}\n\n## Sertifikasi\n${D.certs.map(c=>`- ${c.name} — ${c.issuer} (${c.year})`).join("\n")}\n`;
+//  save(`CV_${slug}.md`,md)};
 
 /* ---------- Pembuat PDF (jsPDF) ---------- */
 function makePdf(){const d=new window.jspdf.jsPDF({unit:"pt",format:"a4"});const W=595,H=842,M=48,CW=W-2*M;let y=M;const acc=[36,87,214],ink=[22,32,46],mute=[91,102,119];
@@ -99,7 +112,7 @@ function makePdf(){const d=new window.jspdf.jsPDF({unit:"pt",format:"a4"});const
  head("Pendidikan");D.edu.forEach(e=>{line(e.title+" - "+e.org,11,"bold",ink);line(e.when,9,"normal",mute);y+=6});
  head("Organisasi");D.org.forEach(o=>{line(o.role+" - "+o.org,11,"bold",ink);line(o.when,9,"normal",mute);line(o.desc,10,"normal",ink);y+=8});
  head("Keahlian");line(D.skills.join(", "),10,"normal",ink);
- head("Sertifikasi");D.certs.forEach(c=>line("- "+c,10,"normal",ink));
+ head("Sertifikasi");D.certs.forEach(c=>line("- "+c.name+" ("+c.issuer+", "+c.year+")",10,"normal",ink));
  head("Bahasa");line(D.langs.join("; "),10,"normal",ink);
  return d.output("arraybuffer")}
 $("#dlPdf").onclick=()=>{if(!(window.jspdf&&window.jspdf.jsPDF)){toast("Pustaka PDF belum termuat. Muat ulang halaman lalu coba lagi.");return}save(`CV_${slug}.pdf`,makePdf())};

@@ -366,6 +366,13 @@ section.blk {
 .org-card .org{color:var(--acc);font-weight:600;font-size:15px}
 .org-card p{margin:6px 0 0;color:var(--mute);font-size:15px}
 
+/* ===== Kartu sertifikasi ===== */
+.cert{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;text-decoration:none;transition:.2s}
+.cert:hover{border-color:var(--acc);background:var(--soft)}
+.cert b{display:block;font-size:14px;line-height:1.35}
+.cert small{color:var(--mute);font-size:12px}
+.cert svg{width:18px;height:18px;flex:none;color:var(--acc)}
+
 /* ===== Halaman CV ===== */
 .cvhead {
   display: flex;
