@@ -3,40 +3,37 @@ const D={
  name:"Fazry Nurhakim",
  photo:"images/myphoto.jpeg",
  role:"Full-Stack Developer | Software Engineer | System Development | Data Analyst | QA Tester",
- summary:"Saya membangun produk digital yang rapi, cepat, dan mudah digunakan — dari rancangan antarmuka hingga sistem di belakangnya.",
- about:"Saya adalah lulusan Teknik Informatika dari Universitas Bani Saleh yang memiliki minat besar dalam pengembangan perangkat lunak dan analisis data. Saya memiliki pengalaman menggunakan bahasa pemrograman seperti Python, PHP, MySQL, dan Microsoft SQL Server. Saya juga memiliki keterampilan dalam pengembangan web menggunakan HTML, CSS, dan JavaScript, serta familier dengan framework CodeIgniter 3 dan Laravel. Selama masa studi, saya aktif berpartisipasi dalam proyek kelompok, seperti membangun dan mengembangkan aplikasi maupun situs web. Selain itu, saya telah mengikuti kursus tambahan di bidang Data Science yang memperdalam pemahaman saya mengenai analisis data. Berbekal minat yang kuat terhadap teknologi, saya sangat antusias dengan kesempatan untuk menerapkan keterampilan teknis saya dalam lingkungan profesional serta bekerja sama secara kolaboratif, baik dalam tim maupun secara individu.",
- stats:[["1","Tahun pengalaman"],["3","Project selesai"]],
- focus:["Membangun aplikasi web yang aksesibel dan responsif","Mendalami arsitektur cloud dan otomatisasi","Berbagi ilmu lewat tulisan dan komunitas"],
+ summary:"I build polished, fast, and user-friendly digital products, ranging from interface design to the underlying systems.",
+ about:"I am an Informatics Engineering graduate from Bani Saleh University with a strong interest in software development and data analysis. I have experience working with programming languages ​​such as Python, PHP, MySQL, and Microsoft SQL Server. I am also skilled in web development using HTML, CSS, and JavaScript, and I am familiar with frameworks like CodeIgniter 3 and Laravel. During my studies, I actively participated in group projects, including the creation and development of various applications and websites. Furthermore, I have completed additional coursework in Data Science, which has deepened my understanding of data analysis. Driven by a keen interest in technology, I am highly enthusiastic about the opportunity to apply my technical skills in a professional environment and to work collaboratively, whether as part of a team or independently.",
+ stats:[["1","Years of experience"],["3","Project completed"]],
+ focus:["Building accessible and responsive web applications", "Delving into cloud architecture and automation", "Sharing knowledge through writing and community"],
  skills:["JavaScript", "React.js","Node.js","Python","SQL Server","MySQL","Git","UI/UX","REST API","Figma"],
  exp:[
-  {when:"Desember 2024 – Desember 2025",title:"System Development Intern",org:"PT Denso Manufacturing Indonesia",desc:"Merancang dan mengembangkan sistem web untuk memenuhi kebutuhan pengguna di departemen QA, menggunakan bahasa pemrograman PHP, framework CodeIgniter 3, dan Microsoft SQL Server, serta melakukan analisis data."}],
- edu:[{when:"2022 – 2026 | 3.54/4.00",title:"S1 Teknik Informatika",org:"Universitas Bani Saleh"}],
+  {when:"December 2024 – December 2025",title:"System Development Intern",org:"PT Denso Manufacturing Indonesia",desc:"Designed, developed, tested, and maintained systems and applications to meet user needs and company objectives, covering requirements analysis, system design, coding, UAT, maintenance, and documentation. Built with PHP, Python, CodeIgniter 3, Microsoft SQL Server, and Git."}],
+ edu:[{when:"2022 – 2026 | 3.54/4.00",title:"Bachelor’s Degree in Informatics Engineering",org:"Universitas Bani Saleh"}],
  certs:[
   {name:"Cisco-CCNA1",issuer:"Cisco Networking Academy",year:"2024",file:"sertifikat/Cisco-CCNA1.PDF"},
   {name:"Cisco-ITE",issuer:"Cisco Networking Academy",year:"2023",file:"sertifikat/Cisco-ITE.PDF"},
   {name:"DBS Foundation-Financial Literasi and Job Readiness",issuer:"DBS Foundation",year:"2026",file:"sertifikat/DBS Foundation-Financial Literasi and Job Readiness.pdf"},
-  {name:"Dicoding-Belajar Penerapan Data Science dengan Microsoft Fabric",issuer:"Dicoding Academy",year:"2026",file:"sertifikat/Dicoding-Belajar Penerapan Data Science dengan Microsoft Fabric.pdf"},
-  {name:"Dicoding-Membangun Aplikasi Gen AI dengan Microsoft Azure",issuer:"Dicoding Academy",year:"2026",file:"sertifikat/Dicoding-Membangun Aplikasi Gen AI dengan Microsoft Azure.pdf"},
-  {name:"Dicoding-PELATIHAN BELAJAR DASAR AI",issuer:"Dicoding Academy",year:"2024",file:"sertifikat/Dicoding-PELATIHAN BELAJAR DASAR AI.PDF"},
-  {name:"Dicoding-PELATIHAN BELAJAR DASAR DATA SCIENCE",issuer:"Dicoding Academy",year:"2024",file:"sertifikat/Dicoding-PELATIHAN BELAJAR DASAR DATA SCIENCE.PDF"},
-  {name:"Dicoding-PELATIHAN BELAJAR DASAR MANAJEMEN PROYEK",issuer:"Dicoding Academy",year:"2024",file:"sertifikat/Dicoding-PELATIHAN BELAJAR DASAR MANAJEMEN PROYEK.PDF"},
-  {name:"Dicoding-PELATIHAN BELAJAR DASAR SQL",issuer:"Dicoding Academy",year:"2024",file:"sertifikat/Dicoding-PELATIHAN BELAJAR DASAR SQL.PDF"},
+  {name:"Dicoding-Learning the Application of Data Science with Microsoft Fabric",issuer:"Dicoding Academy",year:"2026",file:"sertifikat/Dicoding-Learning the Application of Data Science with Microsoft Fabric.pdf"},
+  {name:"Dicoding-Building Gen AI Applications with Microsoft Azure",issuer:"Dicoding Academy",year:"2026",file:"sertifikat/Dicoding-Building Gen AI Applications with Microsoft Azure.pdf"},
+  {name:"Dicoding-Learning AI Basics",issuer:"Dicoding Academy",year:"2024",file:"sertifikat/Dicoding-Learning AI Basics.PDF"},
+  {name:"Dicoding-Learning the Basics of Data Science",issuer:"Dicoding Academy",year:"2024",file:"sertifikat/Dicoding-Learning the Basics of Data Science.PDF"},
+  {name:"Dicoding-Learning the Basics of Project Management",issuer:"Dicoding Academy",year:"2024",file:"sertifikat/Dicoding-Learning the Basics of Project Management.PDF"},
+  {name:"Dicoding-Learning SQL Basics",issuer:"Dicoding Academy",year:"2024",file:"sertifikat/Dicoding-Learning SQL Basics.PDF"},
   {name:"Ioda-Public Speaking",issuer:"Ioda Academy",year:"2026",file:"sertifikat/Ioda-Public Speaking.pdf"},
   {name:"Oracle-DATABASE DESIGN",issuer:"Oracle Academy",year:"2026",file:"sertifikat/Oracle-DATABASE DESIGN.PDF"},
   {name:"Oracle-JAVA FUNDAMENTAL",issuer:"Oracle Academy",year:"2024",file:"sertifikat/Oracle-JAVA FUNDAMENTAL.PDF"},
   {name:"Oracle-JAVA PROGRAMMING",issuer:"Oracle Academy",year:"2026",file:"sertifikat/Oracle-JAVA PROGRAMMING.pdf"}],
   org:[
-  {when:"September 2024 – September 2026",role:"Sekretaris",org:"Karang Taruna",desc:"Sekretaris Karang Taruna adalah individu yang bertanggung jawab mengelola administrasi dan dokumentasi organisasi. Tugasnya meliputi mencatat notulen rapat, menyusun agenda kegiatan, serta mengelola surat-menyurat. Selain itu, sekretaris berperan dalam berkomunikasi dengan anggota maupun pihak eksternal, memastikan kelancaran arus informasi, serta mendukung program-program yang dilaksanakan oleh Karang Taruna."},
-  {when:"Februari 2025 – Februari 2026",role:"Ketua Divisi Literasi dan Pengembangan",org:"Himpunan Mahasiswa Teknik Informatika (HMTI)",desc:"Kepala Divisi Literasi dan Pengembangan Himpunan Mahasiswa Teknik Informatika (HMTI) bertanggung jawab untuk merancang dan melaksanakan program literasi, mengembangkan kapasitas anggota melalui pelatihan, diskusi, atau lokakarya, mengelola kegiatan pengembangan diri dan peningkatan kualitas sumber daya manusia, serta mengevaluasi dan melaporkan hasil kegiatan divisi."},
-  {when:"Februari 2024 – Februari 2025",role:"Ketua Divisi Hubungan Masyarakat (Humas)",org:"Himpunan Mahasiswa Teknik Informatika (HMTI)",desc:"Ketua Divisi Hubungan Masyarakat Himpunan Mahasiswa Teknik Informatika (HMTI) bertanggung jawab mengelola komunikasi dan hubungan eksternal organisasi. Tugas utamanya meliputi penyampaian informasi mengenai kegiatan HMTI kepada anggota dan masyarakat umum, pengelolaan media sosial, serta pembangunan kemitraan dengan pihak eksternal, seperti perusahaan dan organisasi lainnya."}],
- langs:["Indonesia (native)","Inggris (intermediate)"],
+  {when:"September 2024 – September 2026",role:"Secretary",org:"Karang Taruna",desc:"The Secretary of Karang Taruna is the individual responsible for managing the organization's administration and documentation. Their duties include recording meeting minutes, drafting activity agendas, and handling correspondence. Furthermore, the secretary plays a role in communicating with both members and external parties, ensuring a smooth flow of information, and supporting the programs implemented by Karang Taruna."},
+  {when:"February 2025 – February 2026",role:"Head of the Literacy and Development Division",org:"Himpunan Mahasiswa Teknik Informatika (HMTI)",desc:"The Head of the Literacy and Development Division of the Informatics Engineering Student Association (HMTI) is responsible for designing and implementing literacy programs, developing members' capabilities through training, discussions, or workshops, managing personal development and human resource quality-enhancement activities, as well as evaluating and reporting on the outcomes of the division's initiatives."},
+  {when:"February 2024 – February 2025",role:"Head of the Public Relations Division",org:"Himpunan Mahasiswa Teknik Informatika (HMTI)",desc:"The Head of the Public Relations Division of the Informatics Engineering Student Association (HMTI) is responsible for managing the organization's communications and external relations. Their primary duties include disseminating information about HMTI activities to members and the general public, managing social media, and building partnerships with external entities, such as companies and other organizations."}],
+ langs:["Indonesian (native)","English (intermediate)"],
  projects:[
   {t:"Dashboard Keuangan",c:"Web",d:"Aplikasi pencatat arus kas dengan grafik interaktif dan ekspor laporan.",tags:["React","Chart.js"],demo:"#",code:"#"},
   {t:"Analisis Data Penjualan",c:"Data",d:"Pipeline Python untuk membersihkan dan memvisualisasikan data penjualan bulanan.",tags:["Python","Pandas"],demo:"#",code:"#"},
-  {t:"Aplikasi Kebiasaan Harian",c:"Mobile",d:"Aplikasi pelacak kebiasaan dengan pengingat dan statistik mingguan.",tags:["React Native","SQLite"],demo:"#",code:"#"},
-  {t:"API Reservasi",c:"Web",d:"REST API untuk reservasi ruang dengan autentikasi dan dokumentasi lengkap.",tags:["Node.js","PostgreSQL"],demo:"#",code:"#"},
-  {t:"Prediksi Harga Rumah",c:"Data",d:"Model regresi dengan evaluasi dan antarmuka sederhana untuk mencoba prediksi.",tags:["scikit-learn","Streamlit"],demo:"#",code:"#"},
-  {t:"Portofolio Fotografi",c:"Web",d:"Galeri responsif dengan pemuatan gambar bertahap dan mode gelap.",tags:["HTML","CSS","JS"],demo:"#",code:"#"}],
+  {t:"Aplikasi Kebiasaan Harian",c:"Mobile",d:"Aplikasi pelacak kebiasaan dengan pengingat dan statistik mingguan.",tags:["React Native","SQLite"],demo:"#",code:"#"}],
  email:"fazrynurhakim170904@gmail.com",
  wa:"6282137064800",
  links:{linkedin:"https://www.linkedin.com/in/fazry-nurhakim-999b932aa",instagram:"https://www.instagram.com/aboutzry_",github:"https://github.com/fazryhakim"}
@@ -72,12 +69,12 @@ setPhoto();
 
 /* ---------- Halaman CV ---------- */
 const cvList=a=>a.map(x=>`<li>${x}</li>`).join("");
-function cvBody(){return `<div class="side"><div><h3>Kontak</h3><ul class="plain"><li>${D.email}</li><li>+${D.wa}</li><li>${D.links.linkedin.replace("https://www.","")}</li><li>${D.links.github.replace("https://","")}</li></ul></div>
-<div><h3>Keahlian</h3><div class="chips">${D.skills.map(s=>`<span class="chip">${s}</span>`).join("")}</div></div>
-<div><h3>Bahasa</h3><ul class="plain">${cvList(D.langs)}</ul></div><div><h3>Sertifikasi</h3><ul class="plain">${D.certs.map(c=>`<li><a class="cert" href="${c.file}" target="_blank" rel="noopener"><span><b>${c.name}</b><small>${c.issuer} · ${c.year}</small></span><svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>`).join("")}</ul></div></div>
+function cvBody(){return `<div class="side"><div><h3>Contact</h3><ul class="plain"><li>${D.email}</li><li>+${D.wa}</li><li>${D.links.linkedin.replace("https://www.","")}</li><li>${D.links.github.replace("https://","")}</li></ul></div>
+<div><h3>Skill</h3><div class="chips">${D.skills.map(s=>`<span class="chip">${s}</span>`).join("")}</div></div>
+<div><h3>Language</h3><ul class="plain">${cvList(D.langs)}</ul></div><div><h3>Sertifikasi</h3><ul class="plain">${D.certs.map(c=>`<li><a class="cert" href="${c.file}" target="_blank" rel="noopener"><span><b>${c.name}</b><small>${c.issuer} · ${c.year}</small></span><svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>`).join("")}</ul></div></div>
 <div class="main"><h2>${D.name}</h2><p class="role" style="margin:8px 0 14px;font-size:18px">${D.role}</p><p style="color:var(--mute);margin:0 0 30px">${D.about}</p>
-<h3>Pengalaman</h3><ul class="tl" style="margin-bottom:12px">${D.exp.map(e=>`<li><span class="when">${e.when}</span><h3 style="color:var(--ink);font-size:18px;font-weight:700">${e.title}</h3><div class="org">${e.org}</div><p>${e.desc}</p></li>`).join("")}</ul>
-<h3>Pendidikan</h3><ul class="tl">${D.edu.map(e=>`<li><span class="when">${e.when}</span><h3 style="color:var(--ink);font-size:18px;font-weight:700">${e.title}</h3><div class="org">${e.org}</div></li>`).join("")}</ul><h3 style="margin-top:12px">Organisasi</h3><ul class="tl">${D.org.map(o=>`<li><span class="when">${o.when}</span><h3 style="color:var(--ink);font-size:18px;font-weight:700">${o.role}</h3><div class="org">${o.org}</div><p>${o.desc}</p></li>`).join("")}</ul></div>`}
+<h3>Experience</h3><ul class="tl" style="margin-bottom:12px">${D.exp.map(e=>`<li><span class="when">${e.when}</span><h3 style="color:var(--ink);font-size:18px;font-weight:700">${e.title}</h3><div class="org">${e.org}</div><p>${e.desc}</p></li>`).join("")}</ul>
+<h3>Education</h3><ul class="tl">${D.edu.map(e=>`<li><span class="when">${e.when}</span><h3 style="color:var(--ink);font-size:18px;font-weight:700">${e.title}</h3><div class="org">${e.org}</div></li>`).join("")}</ul><h3 style="margin-top:12px">Organization</h3><ul class="tl">${D.org.map(o=>`<li><span class="when">${o.when}</span><h3 style="color:var(--ink);font-size:18px;font-weight:700">${o.role}</h3><div class="org">${o.org}</div><p>${o.desc}</p></li>`).join("")}</ul></div>`}
 $("#cvsheet").innerHTML=cvBody();
 
 /* ---------- Unduh berkas ---------- */

@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
-    <title>Portofolio Pribadi</title>
+    <title>Portofolio Fazry</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Manrope:wght@400;500;600;700&display=swap"
@@ -26,7 +26,7 @@
               <path
                 d="M3 11l9-8 9 8v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"
               /></svg
-            ><span>Beranda</span></button
+            ><span>Home Page</span></button
           ><button class="nv" data-go="/cv">
             <svg class="i nvi" viewBox="0 0 24 24">
               <path
@@ -64,8 +64,8 @@
               <p class="role" id="h-role"></p>
               <p class="lead" id="h-sum"></p>
               <div class="cta">
-                <button class="btn" data-go="/project">Lihat project</button
-                ><button class="btn alt" data-go="/cv">Buka CV</button>
+                <button class="btn" data-go="/project">View project</button
+                ><button class="btn alt" data-go="/cv">Open CV</button>
               </div>
             </div>
             <div class="photo"><div class="frame" id="photoBox"></div></div>
@@ -73,31 +73,31 @@
           <div class="stats" id="stats"></div>
 
           <section class="blk">
-            <h2 class="sec">Tentang saya</h2>
+            <h2 class="sec">About Me</h2>
             <p class="sub" id="h-about"></p>
             <div class="grid2">
               <div class="card">
                 <h3 style="font-size: 18px; margin-bottom: 14px">
-                  Keahlian utama
+                  Core Expertise
                 </h3>
                 <div class="chips" id="skills"></div>
               </div>
               <div class="card">
                 <h3 style="font-size: 18px; margin-bottom: 14px">
-                  Fokus saat ini
+                  Current focus
                 </h3>
                 <div id="focus" style="color: var(--mute)"></div>
               </div>
             </div>
           </section>
           <section class="blk">
-            <h2 class="sec">Pengalaman</h2>
-            <p class="sub">Perjalanan karier saya sejauh ini.</p>
+            <h2 class="sec">Experience</h2>
+            <p class="sub">My career journey so far.</p>
             <ul class="tl" id="exp"></ul>
           </section>
           <section class="blk">
-            <h2 class="sec">Organisasi</h2>
-            <p class="sub">Keterlibatan saya di organisasi dan komunitas.</p>
+            <h2 class="sec">Organization</h2>
+            <p class="sub">My involvement in organizations and communities.</p>
             <div class="orgs" id="orgs"></div>
           </section>
         </div>
@@ -110,14 +110,14 @@
             <div>
               <h2 class="sec">Curriculum Vitae</h2>
               <p class="sub" style="margin: 0">
-                Unduh CV dalam format yang Anda butuhkan.
+                Download CV in PDF format
               </p>
             </div>
             <div class="fbtns">
               <button class="btn" id="dlPdf">
                 <svg class="i" viewBox="0 0 24 24">
                   <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16" /></svg
-                >Unduh CV (PDF)</button>
+                >Download CV (PDF)</button>
               <!-- <button class="btn alt" id="dlHtml">Unduh (HTML)</button>
               <button class="btn alt" id="dlMd">Unduh (Markdown)</button> -->
             </div>
@@ -133,10 +133,9 @@
       <!-- PROJECT -->
       <div class="view" id="v-project">
         <div class="wrap">
-          <h2 class="sec">Project pribadi</h2>
+          <h2 class="sec">Personal project</h2>
           <p class="sub">
-            Kumpulan karya yang saya bangun untuk belajar, menyelesaikan
-            masalah, dan bereksperimen.
+            A collection of works I created to learn, solve problems, and experiment.
           </p>
           <div
             class="filters"
@@ -153,18 +152,17 @@
       <div class="wrap">
         <div class="fgrid">
           <div>
-            <h2>Mari berkolaborasi</h2>
+            <h2>Let’s collaborate</h2>
             <p class="sub" style="margin-top: 12px">
-              Punya ide, tawaran proyek, atau sekadar ingin menyapa? Hubungi
-              saya lewat media sosial atau kirim pesan langsung.
+              Have an idea, a project proposal, or just want to say hello? Reach out to me via social media or send me a direct message.
             </p>
             <div class="soc" id="soc"></div>
           </div>
           <div>
             <div class="two">
               <div class="fld">
-                <label for="fn">Nama</label
-                ><input id="fn" autocomplete="name" placeholder="Nama Anda" />
+                <label for="fn">Name</label
+                ><input id="fn" autocomplete="name" placeholder="Your name" />
               </div>
               <div class="fld">
                 <label for="fe">Email</label
@@ -172,22 +170,22 @@
                   id="fe"
                   type="email"
                   autocomplete="email"
-                  placeholder="nama@email.com"
+                  placeholder="name@email.com"
                 />
               </div>
             </div>
             <div class="fld">
-              <label for="fm">Pesan</label
+              <label for="fm">Message</label
               ><textarea
                 id="fm"
                 maxlength="800"
-                placeholder="Tulis pesan Anda di sini…"
+                placeholder="Write your message here…"
               ></textarea>
               <div class="cnt"><span id="cnt">0</span>/800</div>
             </div>
             <div class="fbtns">
-              <button class="btn" id="sendMail">Kirim lewat Email</button
-              ><button class="btn alt" id="sendWa">Kirim lewat WhatsApp</button>
+              <button class="btn" id="sendMail">Send via Email</button
+              ><button class="btn alt" id="sendWa">Send via WhatsApp</button>
             </div>
           </div>
         </div>
