@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Portofolio Pribadi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </head>
+  <body>
+    <div id="prog"></div>
+    <header class="top">
+      <div class="wrap bar">
+        <a class="logo" href="#/" id="logo"></a>
+        <nav aria-label="Navigasi utama">
+          <button class="nv" data-go="/">
+            <svg class="i nvi" viewBox="0 0 24 24">
+              <path
+                d="M3 11l9-8 9 8v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"
+              /></svg
+            ><span>Beranda</span></button
+          ><button class="nv" data-go="/cv">
+            <svg class="i nvi" viewBox="0 0 24 24">
+              <path
+                d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8zM14 3v5h5M9 13h6M9 17h6"
+              /></svg
+            ><span>CV</span></button
+          ><button class="nv" data-go="/project">
+            <svg class="i nvi" viewBox="0 0 24 24">
+              <rect x="3" y="3" width="7" height="7" rx="1.5" />
+              <rect x="14" y="3" width="7" height="7" rx="1.5" />
+              <rect x="3" y="14" width="7" height="7" rx="1.5" />
+              <rect x="14" y="14" width="7" height="7" rx="1.5" /></svg
+            ><span>Project</span>
+          </button>
+        </nav>
+        <button
+          class="ic-btn"
+          id="theme"
+          aria-label="Ganti tema terang atau gelap"
+        >
+          <svg class="i" viewBox="0 0 24 24">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- BERANDA -->
+      <div class="view" id="v-home">
+        <div class="wrap">
+          <div class="hero">
+            <div>
+              <h1 id="h-name"></h1>
+              <p class="role" id="h-role"></p>
+              <p class="lead" id="h-sum"></p>
+              <div class="cta">
+                <button class="btn" data-go="/project">Lihat project</button
+                ><button class="btn alt" data-go="/cv">Buka CV</button>
+              </div>
+            </div>
+            <div class="photo"><div class="frame" id="photoBox"></div></div>
+          </div>
+          <div class="stats" id="stats"></div>
+
+          <section class="blk">
+            <h2 class="sec">Tentang saya</h2>
+            <p class="sub" id="h-about"></p>
+            <div class="grid2">
+              <div class="card">
+                <h3 style="font-size: 18px; margin-bottom: 14px">
+                  Keahlian utama
+                </h3>
+                <div class="chips" id="skills"></div>
+              </div>
+              <div class="card">
+                <h3 style="font-size: 18px; margin-bottom: 14px">
+                  Fokus saat ini
+                </h3>
+                <div id="focus" style="color: var(--mute)"></div>
+              </div>
+            </div>
+          </section>
+          <section class="blk">
+            <h2 class="sec">Pengalaman</h2>
+            <p class="sub">Perjalanan karier saya sejauh ini.</p>
+            <ul class="tl" id="exp"></ul>
+          </section>
+          <section class="blk">
+            <h2 class="sec">Organisasi</h2>
+            <p class="sub">Keterlibatan saya di organisasi dan komunitas.</p>
+            <div class="orgs" id="orgs"></div>
+          </section>
+        </div>
+      </div>
+
+      <!-- CV -->
+      <div class="view" id="v-cv">
+        <div class="wrap">
+          <div class="cvhead">
+            <div>
+              <h2 class="sec">Curriculum Vitae</h2>
+              <p class="sub" style="margin: 0">
+                Unduh CV dalam format yang Anda butuhkan.
+              </p>
+            </div>
+            <div class="fbtns">
+              <button class="btn" id="dlPdf">
+                <svg class="i" viewBox="0 0 24 24">
+                  <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16" /></svg
+                >Unduh CV (PDF)</button
+              ><button class="btn alt" id="dlHtml">Unduh (HTML)</button
+              ><button class="btn alt" id="dlMd">Unduh (Markdown)</button>
+            </div>
+          </div>
+          <article class="cvsheet" id="cvsheet"></article>
+          <p class="sub" style="margin-top: 18px; font-size: 14px">
+            File PDF dibuat langsung dari data CV di atas, teksnya bisa
+            diseleksi dan dicari.
+          </p>
+        </div>
+      </div>
+
+      <!-- PROJECT -->
+      <div class="view" id="v-project">
+        <div class="wrap">
+          <h2 class="sec">Project pribadi</h2>
+          <p class="sub">
+            Kumpulan karya yang saya bangun untuk belajar, menyelesaikan
+            masalah, dan bereksperimen.
+          </p>
+          <div
+            class="filters"
+            id="filters"
+            role="group"
+            aria-label="Filter kategori"
+          ></div>
+          <div class="pgrid" id="pgrid"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="contact">
+      <div class="wrap">
+        <div class="fgrid">
+          <div>
+            <h2>Mari berkolaborasi</h2>
+            <p class="sub" style="margin-top: 12px">
+              Punya ide, tawaran proyek, atau sekadar ingin menyapa? Hubungi
+              saya lewat media sosial atau kirim pesan langsung.
+            </p>
+            <div class="soc" id="soc"></div>
+          </div>
+          <div>
+            <div class="two">
+              <div class="fld">
+                <label for="fn">Nama</label
+                ><input id="fn" autocomplete="name" placeholder="Nama Anda" />
+              </div>
+              <div class="fld">
+                <label for="fe">Email</label
+                ><input
+                  id="fe"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="nama@email.com"
+                />
+              </div>
+            </div>
+            <div class="fld">
+              <label for="fm">Pesan</label
+              ><textarea
+                id="fm"
+                maxlength="800"
+                placeholder="Tulis pesan Anda di sini…"
+              ></textarea>
+              <div class="cnt"><span id="cnt">0</span>/800</div>
+            </div>
+            <div class="fbtns">
+              <button class="btn" id="sendMail">Kirim lewat Email</button
+              ><button class="btn alt" id="sendWa">Kirim lewat WhatsApp</button>
+            </div>
+          </div>
+        </div>
+        <div class="copy">
+          <span id="copy"></span>
+          <span>Dibuat dengan HTML, CSS, dan JavaScript</span>
+        </div>
+      </div>
+    </footer>
+    <div id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
