@@ -123,16 +123,16 @@ $("#dlPdf").onclick=()=>{if(!(window.jspdf&&window.jspdf.jsPDF)){toast("Pustaka 
  window.reveal=()=>{if(!io||reduce)return;$$(sel).forEach(el=>{if(el.__r)return;el.__r=1;el.classList.add("rv");el.style.setProperty("--d",Math.min([...el.parentNode.children].indexOf(el),6)*70+"ms");io.observe(el)})}})();
 
 /* ---------- Project + filter ---------- */
-const cats=["Semua",...new Set(D.projects.map(p=>p.c))];let cur="Semua";
+const cats=["All",...new Set(D.projects.map(p=>p.c))];let cur="All";
 
 function drawProj(){
  $("#filters").innerHTML=cats.map(c=>`<button aria-pressed="${c===cur}" data-c="${c}">${c}</button>`).join("");
- $("#pgrid").innerHTML=D.projects.filter(p=>cur==="Semua"||p.c===cur).map(p=>{
+ $("#pgrid").innerHTML=D.projects.filter(p=>cur==="All"||p.c===cur).map(p=>{
   const i=D.projects.indexOf(p),ini=p.t.split(" ").map(w=>w[0]).slice(0,2).join("");
   const thumb=p.video
    ?`<button class="thumb has-video" data-v="${i}" aria-label="Putar video demo ${p.t}"${p.poster?` style="background-image:url('${p.poster}')"`:""}>${p.poster?"":ini}<span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>`
    :`<div class="thumb" aria-hidden="true">${ini}</div>`;
-  return `<article class="proj">${thumb}<div class="pb"><div class="chips"><span class="chip">${p.c}</span></div><h3>${p.t}</h3><p>${p.d}</p><div class="m" style="color:var(--mute);font-size:13px">${p.tags.join(" · ")}</div><div class="lk">${p.video?`<button class="vbtn" data-v="${i}">▶ Video demo</button>`:""}`}).join("");
+  return `<article class="proj">${thumb}<div class="pb"><div class="chips"><span class="chip">${p.c}</span></div><h3>${p.t}</h3><p>${p.d}</p><div class="m" style="color:var(--mute);font-size:13px">${p.tags.join(" · ")}</div><div class="lk">${p.video?`<button class="vbtn" data-v="${i}">▶ Demo video</button>`:""}`}).join("");
  $$("#filters button").forEach(b=>b.onclick=()=>{cur=b.dataset.c;drawProj()});
  $$("[data-v]").forEach(b=>b.onclick=()=>openVideo(+b.dataset.v));
  window.reveal&&reveal()}
