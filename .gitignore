@@ -1,12 +1,12 @@
 # Mengabaikan file video dan arsip besar
-videos/
-*.mp4
-*.mkv
-*.avi
-*.mov
-*.zip
-*.rar
-*.iso
+#videos/
+#*.mp4
+#*.mkv
+#*.avi
+#*.mov
+#*.zip
+#*.rar
+#*.iso
 
 # Mengabaikan folder sistem & build (jika ada)
 node_modules/
