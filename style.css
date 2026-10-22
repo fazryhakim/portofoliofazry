@@ -359,19 +359,65 @@ section.blk {
 }
 
 /* ===== Organisasi ===== */
-.orgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:20px}
-.org-card{display:flex;flex-direction:column;gap:6px}
-.org-card .when{font:600 13px var(--bd);color:var(--mute)}
-.org-card h3{font-size:19px}
-.org-card .org{color:var(--acc);font-weight:600;font-size:15px}
-.org-card p{margin:6px 0 0;color:var(--mute);font-size:15px}
+.orgs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 20px;
+}
+.org-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.org-card .when {
+  font: 600 13px var(--bd);
+  color: var(--mute);
+}
+.org-card h3 {
+  font-size: 19px;
+}
+.org-card .org {
+  color: var(--acc);
+  font-weight: 600;
+  font-size: 15px;
+}
+.org-card p {
+  margin: 6px 0 0;
+  color: var(--mute);
+  font-size: 15px;
+}
 
 /* ===== Kartu sertifikasi ===== */
-.cert{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;text-decoration:none;transition:.2s}
-.cert:hover{border-color:var(--acc);background:var(--soft)}
-.cert b{display:block;font-size:14px;line-height:1.35}
-.cert small{color:var(--mute);font-size:12px}
-.cert svg{width:18px;height:18px;flex:none;color:var(--acc)}
+.cert {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.cert:hover {
+  border-color: var(--acc);
+  background: var(--soft);
+}
+.cert b {
+  display: block;
+  font-size: 14px;
+  line-height: 1.35;
+}
+.cert small {
+  color: var(--mute);
+  font-size: 12px;
+}
+.cert svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  color: var(--acc);
+}
 
 /* ===== Halaman CV ===== */
 .cvhead {
@@ -482,6 +528,101 @@ section.blk {
 }
 .proj .lk a:hover {
   text-decoration: underline;
+}
+
+/* ===== Video demo ===== */
+.proj .thumb {
+  position: relative;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  width: 100%;
+  font: 800 44px var(--hd);
+  background-size: cover;
+  background-position: center;
+}
+.proj button.thumb {
+  cursor: pointer;
+}
+.play {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--acc);
+  color: var(--acc-ink);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s;
+}
+.play svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  margin-left: 2px;
+}
+.proj button.thumb:hover .play {
+  transform: scale(1.1);
+}
+.proj .lk .vbtn {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: 700 14px var(--bd);
+  color: var(--acc);
+  cursor: pointer;
+}
+.proj .lk .vbtn:hover {
+  text-decoration: underline;
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: rgba(8, 12, 20, 0.8);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+.modal[hidden] {
+  display: none;
+}
+.mbox {
+  position: relative;
+  width: min(900px, 100%);
+  background: var(--surface);
+  border-radius: 18px;
+  padding: 14px;
+}
+.mbox video,
+.mbox iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: 0;
+  border-radius: 12px;
+  background: #000;
+}
+.mtitle {
+  margin: 12px 6px 4px;
+  font: 700 16px var(--hd);
+}
+.mclose {
+  position: absolute;
+  top: -14px;
+  right: -6px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
 }
 
 /* ===== Footer & kontak ===== */

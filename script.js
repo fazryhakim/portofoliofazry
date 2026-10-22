@@ -31,9 +31,7 @@ const D={
   {when:"February 2024 – February 2025",role:"Head of the Public Relations Division",org:"Himpunan Mahasiswa Teknik Informatika (HMTI)",desc:"The Head of the Public Relations Division of the Informatics Engineering Student Association (HMTI) is responsible for managing the organization's communications and external relations. Their primary duties include disseminating information about HMTI activities to members and the general public, managing social media, and building partnerships with external entities, such as companies and other organizations."}],
  langs:["Indonesian (native)","English (intermediate)"],
  projects:[
-  {t:"Dashboard Keuangan",c:"Web",d:"Aplikasi pencatat arus kas dengan grafik interaktif dan ekspor laporan.",tags:["React","Chart.js"],demo:"#",code:"#"},
-  {t:"Analisis Data Penjualan",c:"Data",d:"Pipeline Python untuk membersihkan dan memvisualisasikan data penjualan bulanan.",tags:["Python","Pandas"],demo:"#",code:"#"},
-  {t:"Aplikasi Kebiasaan Harian",c:"Mobile",d:"Aplikasi pelacak kebiasaan dengan pengingat dan statistik mingguan.",tags:["React Native","SQLite"],demo:"#",code:"#"}],
+  {t:"Umkm POS",c:"Web",d:"A POS system for UMKM featuring fast transaction processing, cashier shift management, payment gateway integration, and the ability to export net profit reports in PDF or Excel format.",tags:["Laravel","Livewire","Microsoft SQL Server","Tailwind CSS"],demo:"#",code:"#",video:"videos/umkm-pos.mp4",poster:"images/umkm-pos.jpeg"}],
  email:"fazrynurhakim170904@gmail.com",
  wa:"6282137064800",
  links:{linkedin:"https://www.linkedin.com/in/fazry-nurhakim-999b932aa",instagram:"https://www.instagram.com/aboutzry_",github:"https://github.com/fazryhakim"}
@@ -126,9 +124,33 @@ $("#dlPdf").onclick=()=>{if(!(window.jspdf&&window.jspdf.jsPDF)){toast("Pustaka 
 
 /* ---------- Project + filter ---------- */
 const cats=["Semua",...new Set(D.projects.map(p=>p.c))];let cur="Semua";
-function drawProj(){$("#filters").innerHTML=cats.map(c=>`<button aria-pressed="${c===cur}" data-c="${c}">${c}</button>`).join("");
- $("#pgrid").innerHTML=D.projects.filter(p=>cur==="Semua"||p.c===cur).map(p=>`<article class="proj"><div class="thumb" aria-hidden="true">${p.t.split(" ").map(w=>w[0]).slice(0,2).join("")}</div><div class="pb"><div class="chips"><span class="chip">${p.c}</span></div><h3>${p.t}</h3><p>${p.d}</p><div class="m" style="color:var(--mute);font-size:13px">${p.tags.join(" · ")}</div><div class="lk"><a href="${p.demo}" target="_blank" rel="noopener">Demo</a><a href="${p.code}" target="_blank" rel="noopener">Kode sumber</a></div></div></article>`).join("");
- $$("#filters button").forEach(b=>b.onclick=()=>{cur=b.dataset.c;drawProj()});window.reveal&&reveal()}
+
+function drawProj(){
+ $("#filters").innerHTML=cats.map(c=>`<button aria-pressed="${c===cur}" data-c="${c}">${c}</button>`).join("");
+ $("#pgrid").innerHTML=D.projects.filter(p=>cur==="Semua"||p.c===cur).map(p=>{
+  const i=D.projects.indexOf(p),ini=p.t.split(" ").map(w=>w[0]).slice(0,2).join("");
+  const thumb=p.video
+   ?`<button class="thumb has-video" data-v="${i}" aria-label="Putar video demo ${p.t}"${p.poster?` style="background-image:url('${p.poster}')"`:""}>${p.poster?"":ini}<span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>`
+   :`<div class="thumb" aria-hidden="true">${ini}</div>`;
+  return `<article class="proj">${thumb}<div class="pb"><div class="chips"><span class="chip">${p.c}</span></div><h3>${p.t}</h3><p>${p.d}</p><div class="m" style="color:var(--mute);font-size:13px">${p.tags.join(" · ")}</div><div class="lk">${p.video?`<button class="vbtn" data-v="${i}">▶ Video demo</button>`:""}`}).join("");
+ $$("#filters button").forEach(b=>b.onclick=()=>{cur=b.dataset.c;drawProj()});
+ $$("[data-v]").forEach(b=>b.onclick=()=>openVideo(+b.dataset.v));
+ window.reveal&&reveal()}
+
+/* ---------- Pemutar video demo ---------- */
+function ytEmbed(u){const m=u.match(/(?:youtu\.be\/|v=|embed\/)([\w-]{11})/);return m?`https://www.youtube.com/embed/${m[1]}?autoplay=1&rel=0`:null}
+function openVideo(i){
+ const p=D.projects[i],yt=ytEmbed(p.video);
+ $("#vbody").innerHTML=yt
+  ?`<iframe src="${yt}" title="Video demo ${p.t}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`
+  :`<video src="${p.video}" controls autoplay playsinline preload="metadata"${p.poster?` poster="${p.poster}"`:""}></video>`;
+ $("#vtitle").textContent=p.t;
+ $("#vmodal").hidden=false;document.body.style.overflow="hidden";$("#vclose").focus()}
+function closeVideo(){$("#vbody").innerHTML="";$("#vmodal").hidden=true;document.body.style.overflow=""}
+$("#vclose").onclick=closeVideo;
+$("#vmodal").onclick=e=>{if(e.target.id==="vmodal")closeVideo()};
+addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("#vmodal").hidden)closeVideo()});
+
 drawProj();
 
 /* ---------- Ikon media sosial ---------- */
